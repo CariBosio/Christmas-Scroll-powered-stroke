@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magic Route</title>
+    <meta name="description" content="Magic Route - A Christmas Experience" />
+    <meta name="author" content="Studio Freight" />
+    <meta
+      name="keywords"
+      content="Magic Route, Christmas Experience, Christmas, Santa Claus"
+    />
+
+    <link rel="stylesheet" href="./src/style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+    ></script>
+  </head>
+
+  <body>
+    <section class="hero">
+      <audio id="christmas-audio" loop crossorigin="anonymous">
+        <source src="./jingle-bells.mp3" type="audio/mpeg" />
+      </audio>
+
+      <button id="music-btn" class="music-control" title="Music-control ">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon-play"
+        >
+          <path d="M9 18V5l12-2v13"></path>
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="16" r="3"></circle>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon-pause"
+          style="display: none"
+        >
+          <rect x="6" y="4" width="4" height="16"></rect>
+          <rect x="14" y="4" width="4" height="16"></rect>
+        </svg>
+      </button>
+      <div class="lottie1">
+        <dotlottie-player
+          src="./ChristmasWindChimes.lottie"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+      <div data-title="div Title" class="title" id="titleRef">
+        <h1>
+          The Magical
+          <br />
+          Christmas Route
+        </h1>
+      </div>
+      <div class="lottie2">
+        <dotlottie-player
+          src="./ChristmasWindChimes.lottie"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+      <div class="scroll-indicator">
+        <img src="./scroll-icon.svg" alt="" />
+      </div>
+    </section>
+
+    <section class="spotlight">
+      <!--! Row 1 -->
+      <div class="row">
+        <div class="img1">
+          <img
+            id="reindeer-img"
+            src="./Christmas-Reindeer-vector.svg"
+            alt=""
+            class="reindeer-img"
+          />
+          <div class="light-nose"></div>
+        </div>
+      </div>
+      <!--! Row 2 -->
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <h2>Everything is ready at the North Pole</h2>
+            <p>
+              The elves are putting the finishing touches on their workshop.
+              Amid laughter and dancing, they're organizing the last colorful
+              packages before the big departure. They're making sure every gift
+              is perfectly wrapped and ready to be delivered.
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="img">
+            <img src="./Elfs.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <!--! Row 3 -->
+      <div class="row">
+        <div class="col">
+          <div class="img">
+            <img src="./Santa-Claus-Sleigh.svg" alt="" />
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <h2>Crossing the Sky</h2>
+            <p>
+              Guided by his faithful reindeer, Santa crosses the heavens, making
+              sure his sleigh, full of surprises, arrives on time. From the
+              heights, he surveys the entire world, ready to shower every home
+              with magic.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="img">
+          <img src="./Santa-Claus.svg" alt="" />
+        </div>
+      </div>
+
+      <div class="svg-path">
+        <svg
+          viewBox="0 0 1378 2760"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMidYMin meet"
+        >
+          <defs>
+            <pattern
+              id="star-pattern"
+              x="0"
+              y="0"
+              width="100"
+              height="100"
+              patternUnits="userSpaceOnUse"
+            >
+              <rect width="100" height="100" fill="transparent" />
+              <circle cx="5" cy="5" r="0.5" fill="white" opacity="0.6" />
+              <circle cx="45" cy="5" r="0.5" fill="cyan" opacity="0.6" />
+              <circle cx="85" cy="5" r="0.5" fill="white" opacity="0.6" />
+              <circle cx="25" cy="75" r="0.7" fill="white" opacity="0.6" />
+              <circle cx="65" cy="75" r="0.6" fill="white" opacity="0.5" />
+              <circle cx="15" cy="95" r="0.8" fill="white" opacity="0.4" />
+              <circle
+                cx="10"
+                cy="10"
+                r="1.5"
+                fill="white"
+                class="star blink-slow"
+              />
+              <circle
+                cx="60"
+                cy="10"
+                r="1.2"
+                fill="#a5f3fc"
+                class="star blink-medium"
+              />
+              <polygon
+                points="50,45 53,50 50,55 47,50"
+                fill="#FFD700"
+                class="star blink-fast"
+              />
+              <path
+                d="M85 20 L87 25 L92 27 L87 29 L85 34 L83 29 L78 27 L83 25 Z"
+                fill="white"
+                class="star blink-medium"
+              />
+              <circle
+                cx="90"
+                cy="90"
+                r="2"
+                fill="cyan"
+                class="star blink-slow"
+              />
+              <circle
+                cx="10"
+                cy="60"
+                r="2.2"
+                fill="white"
+                class="star blink-slow"
+              />
+            </pattern>
+
+            <filter
+              id="white-glow"
+              x="-50%"
+              y="-50%"
+              width="200%"
+              height="200%"
+            >
+              <feGaussianBlur stdDeviation="20" result="coloredBlur" />
+            </filter>
+
+            <mask id="drawing-mask">
+              <path
+                id="mask-path"
+                d="M639.588 100C639.588 100 105.659 100 199.646 703.041C293.634 1306.09 1277.01 579.259 1277.01 1430.6C1277.01 2281.95 -155.308 2114.21 140.153 1477.5C435.616 840.796 1598.43 2665.5 438.43 2881"
+                stroke="rgba(255, 255, 255, 0.8)"
+                stroke-width="200"
+                stroke-linecap="round"
+                fill="none"
+              />
+            </mask>
+          </defs>
+
+          <path
+            id=""
+            d="M639.588 100C639.588 100 105.659 100 199.646 703.041C293.634 1306.09 1277.01 579.259 1277.01 1430.6C1277.01 2281.95 -155.308 2114.21 140.153 1477.5C435.616 840.796 1598.43 2665.5 438.43 2881"
+            stroke="rgba(255, 255, 255, 0.2)"
+            stroke-width="350"
+            stroke-opacity="0.4"
+            stroke-linecap="round"
+            filter="url(#white-glow)"
+            mask="url(#drawing-mask)"
+            fill="none"
+          />
+
+          <path
+            d="M639.588 100C639.588 100 105.659 100 199.646 703.041C293.634 1306.09 1277.01 579.259 1277.01 1430.6C1277.01 2281.95 -155.308 2114.21 140.153 1477.5C435.616 840.796 1598.43 2665.5 438.43 2881"
+            stroke="rgba(255, 255, 255, 0.2)"
+            stroke-width="200"
+            stroke-opacity="0.1"
+            stroke-linecap="round"
+            mask="url(#drawing-mask)"
+            fill="none"
+          />
+
+          <path
+            d="M639.588 100C639.588 100 105.659 100 199.646 703.041C293.634 1306.09 1277.01 579.259 1277.01 1430.6C1277.01 2281.95 -155.308 2114.21 140.153 1477.5C435.616 840.796 1598.43 2665.5 438.43 2881"
+            stroke="url(#star-pattern)"
+            stroke-width="200"
+            stroke-linecap="round"
+            mask="url(#drawing-mask)"
+            fill="none"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <section class="outro">
+      <div class="quiz-confetti"></div>
+      <h1 class="split">Merry Christmas!!!</h1>
+      <div class="lottie3">
+        <dotlottie-player
+          id="lottie-tree"
+          src="./Christmas Tree Animation.lottie"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px"
+          loop
+        ></dotlottie-player>
+      </div>
+    </section>
+
+    <script type="module" src="./src/script.js"></script>
+  </body>
+</html>
