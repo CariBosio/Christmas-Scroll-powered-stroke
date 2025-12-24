@@ -304,6 +304,20 @@ body {
   filter: drop-shadow(100px 100px 50px white);
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 8%;
+  display: grid;
+  place-content: center;
+  padding-block: 1rem;
+ 
+  .created-by {
+    font-size: 0.875rem;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
 
 /* RESPONSIVE */
 
@@ -331,22 +345,22 @@ body {
     width: 100%;
   }
 
-  .outro{
+  .outro {
     flex-direction: column;
     gap: 7rem;
-    
-    & .split{
+
+    & .split {
       /* padding-top: 8rem; */
       text-align: center;
     }
 
-    & .lottie3{
-     right: 0 !important;
-     top: 3rem !important;
+    & .lottie3 {
+      right: 0 !important;
+      top: 3rem !important;
     }
   }
 
-  .spotlight{
+  .spotlight {
     gap: 2rem;
   }
 
@@ -372,9 +386,6 @@ body {
   .spotlight .svg-path {
     top: 5svh;
     width: 85%;
-    height: 100%;     
+    height: 100%;
   }
 }
-
-
-

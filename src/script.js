@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         stagger: 0.1,
         autoAlpha: 0,
         filter: "blur(10px)",
-        ease: "power2.out",
+        ease: "power2.out",    
       });
     }
   }
@@ -224,6 +224,7 @@ gsap.from(chars, {
   scrollTrigger: {
     trigger: ".split",
     start: "top 80%",
+    toggleActions: "play none none reverse",
   },
 });
 
@@ -235,7 +236,7 @@ if (reindeerImg && noseLight) {
   // A. INITIAL STATES (Everything off and invisible)
   gsap.set(reindeerImg, { opacity: 0, y: 50 });
   gsap.set(noseLight, {
-    opacity: 0, 
+    opacity: 0,
     backgroundColor: "rgb(150, 0, 0)",
     boxShadow: "none",
   });
@@ -266,7 +267,7 @@ if (reindeerImg && noseLight) {
   reindeerTl.to(noseLight, {
     opacity: 0.6,
     backgroundColor: "rgb(120, 0, 0)",
-    duration: 0.3, 
+    duration: 0.3,
     ease: "sine.in",
   });
 
@@ -274,15 +275,14 @@ if (reindeerImg && noseLight) {
   // Starts immediately after Step 2.
   // Since we're already at opacity: 0.6, we only need a .to() to the bright state.
   reindeerTl.to(noseLight, {
-      opacity: 0.9, 
-      backgroundColor: "rgb(255, 0, 0)",
-      boxShadow: "0 0 30px 15px rgba(255, 30, 30, 0.8)",
-      duration: 0.8,
-      ease: "sine.inOut",
-      repeat: -1, 
-      yoyo: true, 
-    }
-      );
+    opacity: 0.9,
+    backgroundColor: "rgb(255, 0, 0)",
+    boxShadow: "0 0 30px 15px rgba(255, 30, 30, 0.8)",
+    duration: 0.8,
+    ease: "sine.inOut",
+    repeat: -1,
+    yoyo: true,
+  });
 }
 
 // 7. SCROLL INDICATOR LOGIC (With ScrollTrigger)
@@ -319,5 +319,22 @@ if (scrollIndicatorIcon) {
       end: "20% top",
       scrub: true,
     },
+  });
+}
+
+// 8. FOOTER "CREATED BY" LOGIC
+const createdBy = document.querySelector(".created-by");
+
+if (createdBy) {
+  gsap.to(createdBy, {
+    scrollTrigger: {
+      trigger: ".outro",
+      start: "bottom bottom+=10px",
+      toggleActions: "play none none reverse",
+    },
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out",
   });
 }
